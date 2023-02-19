@@ -27,38 +27,63 @@ public class loginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         centerPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        loginLabel = new javax.swing.JLabel();
+        userField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Asset Tracking System");
+        setLocation(new java.awt.Point(500, 0));
+        setPreferredSize(new java.awt.Dimension(1100, 700));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         centerPanel.setBackground(new java.awt.Color(255, 255, 255));
+        centerPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        centerPanel.setFocusable(false);
 
-        jLabel1.setFont(new java.awt.Font("Lato", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("LOGIN");
+        loginLabel.setFont(new java.awt.Font("Lato", 1, 24)); // NOI18N
+        loginLabel.setForeground(new java.awt.Color(0, 0, 0));
+        loginLabel.setText("LOGIN");
+
+        userField.setText("Username");
+        userField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout centerPanelLayout = new javax.swing.GroupLayout(centerPanel);
         centerPanel.setLayout(centerPanelLayout);
         centerPanelLayout.setHorizontalGroup(
             centerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, centerPanelLayout.createSequentialGroup()
-                .addContainerGap(114, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+            .addGroup(centerPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(loginLabel)
                 .addGap(112, 112, 112))
+            .addGroup(centerPanelLayout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         centerPanelLayout.setVerticalGroup(
             centerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(centerPanelLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addComponent(jLabel1)
-                .addContainerGap(327, Short.MAX_VALUE))
+                .addComponent(loginLabel)
+                .addGap(78, 78, 78)
+                .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(527, Short.MAX_VALUE))
         );
 
-        getContentPane().add(centerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 300, 400));
+        getContentPane().add(centerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 350, 367, 700));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void userFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,6 +122,7 @@ public class loginPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel centerPanel;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel loginLabel;
+    private javax.swing.JTextField userField;
     // End of variables declaration//GEN-END:variables
 }
