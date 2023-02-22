@@ -26,12 +26,38 @@ public class loginPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        BGradient = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Asset Tracking System");
         setLocation(new java.awt.Point(500, 0));
         setPreferredSize(new java.awt.Dimension(1100, 700));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(400, 550));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Poppins ExtraBold", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("LOGIN");
+        jLabel1.setFocusable(false);
+        jLabel1.setMaximumSize(new java.awt.Dimension(100, 50));
+        jLabel1.setMinimumSize(new java.awt.Dimension(100, 50));
+        jLabel1.setPreferredSize(new java.awt.Dimension(150, 100));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 100, 40));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, -1, -1));
+
+        BGradient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/tracking/system/images/gradient.png"))); // NOI18N
+        BGradient.setText("jLabel1");
+        BGradient.setToolTipText("");
+        getContentPane().add(BGradient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 700));
 
         pack();
         setLocationRelativeTo(null);
@@ -73,5 +99,8 @@ public class loginPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BGradient;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
