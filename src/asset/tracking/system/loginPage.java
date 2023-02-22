@@ -28,6 +28,8 @@ public class loginPage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
         BGradient = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,6 +54,31 @@ public class loginPage extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(150, 100));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 100, 40));
 
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField1.setText("Username");
+        jTextField1.setBorder(null);
+        jTextField1.setMaximumSize(new java.awt.Dimension(80, 15));
+        jTextField1.setMinimumSize(new java.awt.Dimension(80, 15));
+        jTextField1.setPreferredSize(new java.awt.Dimension(70, 15));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 175, 190, 30));
+
+        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField1.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        jPasswordField1.setForeground(new java.awt.Color(102, 102, 102));
+        jPasswordField1.setText("Password");
+        jPasswordField1.setBorder(null);
+        jPasswordField1.setMaximumSize(new java.awt.Dimension(80, 15));
+        jPasswordField1.setMinimumSize(new java.awt.Dimension(80, 15));
+        jPasswordField1.setName(""); // NOI18N
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 190, 30));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, -1, -1));
 
         BGradient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/tracking/system/images/gradient.png"))); // NOI18N
@@ -62,6 +89,10 @@ public class loginPage extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,5 +133,7 @@ public class loginPage extends javax.swing.JFrame {
     private javax.swing.JLabel BGradient;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
