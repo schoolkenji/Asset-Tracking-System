@@ -13,12 +13,9 @@ import java.util.logging.Logger;
  *
  * @author Setsuna
  */
-//public class testConnect {
-//    public static Connection getConnection (){
-//        Connection con = null;
-//        
-//        try{
-//            Class.
-//        }
-//    }
-//}
+
+
+        
+        
+   
+
