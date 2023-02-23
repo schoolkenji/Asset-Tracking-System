@@ -15,6 +15,7 @@ public class loginPage extends javax.swing.JFrame {
      */
     public loginPage() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -32,11 +33,14 @@ public class loginPage extends javax.swing.JFrame {
         passwordField = new javax.swing.JPasswordField();
         loginButton = new javax.swing.JButton();
         registerButton = new javax.swing.JButton();
+        minimizeButton = new javax.swing.JLabel();
+        exitButton = new javax.swing.JLabel();
         BGradient = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Asset Tracking System");
         setLocation(new java.awt.Point(500, 0));
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -84,7 +88,8 @@ public class loginPage extends javax.swing.JFrame {
         loginButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("REGISTER");
-        loginButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 153, 255)));
+        loginButton.setBorder(null);
+        loginButton.setBorderPainted(false);
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
@@ -96,10 +101,35 @@ public class loginPage extends javax.swing.JFrame {
         registerButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
         registerButton.setForeground(new java.awt.Color(255, 255, 255));
         registerButton.setText("LOGIN");
-        registerButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 153, 255)));
+        registerButton.setBorder(null);
+        registerButton.setBorderPainted(false);
         jPanel1.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 190, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, -1, -1));
+
+        minimizeButton.setBackground(new java.awt.Color(0, 0, 0));
+        minimizeButton.setFont(new java.awt.Font("Poppins ExtraBold", 0, 36)); // NOI18N
+        minimizeButton.setForeground(new java.awt.Color(255, 255, 255));
+        minimizeButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        minimizeButton.setText("_");
+        minimizeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                minimizeButtonMouseClicked(evt);
+            }
+        });
+        getContentPane().add(minimizeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 7, 30, 30));
+
+        exitButton.setBackground(new java.awt.Color(0, 0, 0));
+        exitButton.setFont(new java.awt.Font("Poppins ExtraBold", 0, 36)); // NOI18N
+        exitButton.setForeground(new java.awt.Color(255, 255, 255));
+        exitButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitButton.setText("X");
+        exitButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitButtonMouseClicked(evt);
+            }
+        });
+        getContentPane().add(exitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 30, 30));
 
         BGradient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/tracking/system/images/gradient.png"))); // NOI18N
         BGradient.setText("jLabel1");
@@ -117,6 +147,14 @@ public class loginPage extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void exitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitButtonMouseClicked
+
+    private void minimizeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeButtonMouseClicked
+        this.setState(loginPage.ICONIFIED);
+    }//GEN-LAST:event_minimizeButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -155,9 +193,11 @@ public class loginPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BGradient;
+    private javax.swing.JLabel exitButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginButton;
     private javax.swing.JLabel loginWORD;
+    private javax.swing.JLabel minimizeButton;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JButton registerButton;
     private javax.swing.JTextField usernameTextField;
