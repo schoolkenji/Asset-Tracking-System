@@ -31,8 +31,8 @@ public class loginPage extends javax.swing.JFrame {
         loginWORD = new javax.swing.JLabel();
         usernameTextField = new javax.swing.JTextField();
         passwordField = new javax.swing.JPasswordField();
-        loginButton = new javax.swing.JButton();
         registerButton = new javax.swing.JButton();
+        loginButton = new javax.swing.JButton();
         minimizeButton = new javax.swing.JLabel();
         exitButton = new javax.swing.JLabel();
         BGradient = new javax.swing.JLabel();
@@ -84,10 +84,23 @@ public class loginPage extends javax.swing.JFrame {
         passwordField.setName(""); // NOI18N
         jPanel1.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 190, 30));
 
+        registerButton.setBackground(new java.awt.Color(102, 153, 255));
+        registerButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
+        registerButton.setForeground(new java.awt.Color(255, 255, 255));
+        registerButton.setText("REGISTER");
+        registerButton.setBorder(null);
+        registerButton.setBorderPainted(false);
+        registerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
+
         loginButton.setBackground(new java.awt.Color(102, 153, 255));
         loginButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
-        loginButton.setText("REGISTER");
+        loginButton.setText("LOGIN");
         loginButton.setBorder(null);
         loginButton.setBorderPainted(false);
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -95,15 +108,7 @@ public class loginPage extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
-
-        registerButton.setBackground(new java.awt.Color(102, 153, 255));
-        registerButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
-        registerButton.setForeground(new java.awt.Color(255, 255, 255));
-        registerButton.setText("LOGIN");
-        registerButton.setBorder(null);
-        registerButton.setBorderPainted(false);
-        jPanel1.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 190, -1));
+        jPanel1.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 190, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, -1, -1));
 
@@ -144,9 +149,9 @@ public class loginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameTextFieldActionPerformed
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginButtonActionPerformed
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     private void exitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonMouseClicked
         System.exit(0);
@@ -155,6 +160,10 @@ public class loginPage extends javax.swing.JFrame {
     private void minimizeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeButtonMouseClicked
         this.setState(loginPage.ICONIFIED);
     }//GEN-LAST:event_minimizeButtonMouseClicked
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
      * @param args the command line arguments
