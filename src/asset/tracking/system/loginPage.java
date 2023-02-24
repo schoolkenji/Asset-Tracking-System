@@ -170,7 +170,7 @@ public class loginPage extends javax.swing.JFrame {
         String username = usernameTextField.getText();
         String password = String.valueOf(passwordField.getPassword());
         
-        String query = "SELECT `username`, `password` FROM `logininfo` WHERE `username` = ? AND `password` = ?";
+        String query = "SELECT `username`, `password` FROM `logininformation` WHERE `username` =? AND `password` =?";
         try {
             ps = myConnection.getConnection().prepareStatement(query);
             
@@ -191,7 +191,7 @@ public class loginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
-        
+
     }//GEN-LAST:event_registerButtonActionPerformed
 
     /**

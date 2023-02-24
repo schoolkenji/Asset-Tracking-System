@@ -18,7 +18,7 @@ public class myConnection {
         
         try{
             Class.forName("com.msql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/javacontactsapp", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/logindb", "root", "");
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
