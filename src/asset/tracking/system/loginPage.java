@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package asset.tracking.system;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -149,10 +155,6 @@ public class loginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameTextFieldActionPerformed
 
-    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_registerButtonActionPerformed
-
     private void exitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonMouseClicked
         System.exit(0);
     }//GEN-LAST:event_exitButtonMouseClicked
@@ -162,8 +164,35 @@ public class loginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_minimizeButtonMouseClicked
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
+        PreparedStatement ps;
+        ResultSet rs;
+        
+        String username = usernameTextField.getText();
+        String password = String.valueOf(passwordField.getPassword());
+        
+        String query = "SELECT `username`, `password` FROM `logininfo` WHERE `username` = ? AND `password` = ?";
+        try {
+            ps = myConnection.getConnection().prepareStatement(query);
+            
+            ps.setString(1, username);
+            ps.setString(2, password);
+            
+            rs = ps.executeQuery();
+            
+            if (rs.next()){
+                JOptionPane.showMessageDialog(null, "YES");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "NO");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(loginPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
+        
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     /**
      * @param args the command line arguments
